@@ -60,7 +60,7 @@ Built with Streamlit:
 
 ## 🏗️ System Architecture
 
-![Architecture Diagram](docs/assests/Architecture_Diagram.png)
+![Architecture Diagram](docs/assets/Architecture_Diagram.png)
 
 ---
 
@@ -231,7 +231,7 @@ Location  = 0.14
 
 ### Dashboard
 
-![Dashboard](docs/assests/Dashboard.png)
+![Dashboard](docs/assets/Dashboard.png)
 
 Displays:
 
@@ -243,7 +243,7 @@ Displays:
 
 ### Profiles
 
-![Profiles](docs/assests/Profiles.png)
+![Profiles](docs/assets/Profiles.png)
 
 Displays:
 
@@ -255,7 +255,7 @@ Displays:
 
 ### Recommendations
 
-![Recommendations](docs/assests/Recommendations.png)
+![Recommendations](docs/assets/Recommendations.png)
 
 Displays:
 
@@ -266,7 +266,7 @@ Displays:
 
 ### Analytics
 
-![Analytics](docs/assests/Analytics.png)
+![Analytics](docs/assets/Analytics.png)
 
 Displays:
 
