@@ -2,6 +2,10 @@ import pandas as pd
 import numpy as np
 import random
 from datetime import datetime, timedelta
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+DATA_DIR.mkdir(parents=True,exist_ok=True)
 random.seed(42)
 np.random.seed(42)
 names = [
@@ -128,7 +132,7 @@ for i in range(75):
         "interests": ", ".join(random.sample(interest_pool,random.randint(3, 5)))
     })
 users_df = pd.DataFrame(users)
-users_df.to_csv("data/users.csv",index=False)
+users_df.to_csv(DATA_DIR / "users.csv",index=False)
 feedback_rows = []
 for uid in users_df["user_id"]:
     for _ in range(random.randint(5,10)):
@@ -149,6 +153,6 @@ for uid in users_df["user_id"]:
             "timestamp": (datetime.now()-timedelta(days=random.randint(1,180))).strftime("%Y-%m-%d")
         })
 feedback_df = pd.DataFrame(feedback_rows)
-feedback_df.to_csv("data/feedback.csv",index=False)
+feedback_df.to_csv(DATA_DIR / "feedback.csv",index=False)
 print("users.csv generated")
 print("feedback.csv generated")

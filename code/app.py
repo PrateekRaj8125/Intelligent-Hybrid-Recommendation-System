@@ -7,8 +7,11 @@ from nlp_engine import build_similarity_matrix
 from matching_engine import (get_top_matches,DEFAULT_WEIGHTS)
 nltk.download("stopwords")
 st.set_page_config(page_title="Intelligent Hybrid Recommendation System",page_icon="🌐",layout="wide")
-USERS_FILE = "data/users.csv"
-FEEDBACK_FILE = "data/feedback.csv"
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+USERS_FILE = DATA_DIR / "users.csv"
+FEEDBACK_FILE = DATA_DIR / "feedback.csv"
 users_df = pd.read_csv(USERS_FILE)
 feedback_df = pd.read_csv(FEEDBACK_FILE)
 if len(feedback_df) > 20:
